@@ -21,25 +21,38 @@ body {
 }
 
 .header a {
-  border-bottom: 3px solid #F0F7EE00;
-  transition: 0.15s;
+    /* BORDER TRANSITIONING ON HOVER */
+    border-bottom: 3px solid #F0F7EE00;
+    transition: 0.15s;
 
-  width: 100px;
-  float: left;
-  color: snow;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+    /* BUTTON APPERANCE */
+    font-size: 17px;
+    text-decoration: none;
+    color: snow;
+    text-align: center;
 
-  float: center;
+    /* SIZE AND POSITIONING */
+    float: left;
+    width: 100px;
+    padding: 14px 16px;
 }
 
 .header a:hover {
-  border-bottom: 3px solid #F0F7EEFF;
-  transition: 0.15s;
+    border-bottom: 3px solid #F0F7EEFF;
+    transition: 0.15s;
 }
 
 .header a.active {
-  border-bottom: 3px solid #BA1200;
+    border-bottom: 3px solid #BA1200;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
 }
