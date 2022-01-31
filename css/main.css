@@ -3,14 +3,43 @@
 }
 
 body {
-    text-align: center;
-    color: snow;
+    color: #F0F7EE;
     font-family: 'Roboto', sans-serif;
 
-    background: rgba(50,50,50,255);
+    background: #453F50;
 }
 
-#header_span {
+.title {
+    text-align: center;
     padding: 50px;
-    background: rgba(31,31,31,255);
+    background: #312D39;
+}
+
+.header {
+    background: #312D39;
+    overflow: hidden;
+}
+
+.header a {
+  border-bottom: 3px solid #F0F7EE00;
+  transition: 0.15s;
+
+  width: 100px;
+  float: left;
+  color: snow;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+  float: center;
+}
+
+.header a:hover {
+  border-bottom: 3px solid #F0F7EEFF;
+  transition: 0.15s;
+}
+
+.header a.active {
+  border-bottom: 3px solid #BA1200;
 }
