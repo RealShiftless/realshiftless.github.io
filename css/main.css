@@ -6,6 +6,8 @@ body {
     color: #F0F7EE;
     font-family: 'Roboto', sans-serif;
 
+    padding-bottom: 50px;
+
     background: #453F50;
 }
 
@@ -15,12 +17,12 @@ body {
     background: #312D39;
 }
 
-.header {
+#header {
     background: #312D39;
     overflow: hidden;
 }
 
-.header a {
+#header a {
     /* BORDER TRANSITIONING ON HOVER */
     border-bottom: 3px solid #F0F7EE00;
     transition: 0.15s;
@@ -37,12 +39,12 @@ body {
     padding: 14px 16px;
 }
 
-.header a:hover {
+#header a:hover {
     border-bottom: 3px solid #F0F7EEFF;
     transition: 0.15s;
 }
 
-.header a.active {
+#header a.active {
     border-bottom: 3px solid #BA1200;
 }
 
@@ -52,7 +54,10 @@ body {
     width: 100%;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+.sticky + body {
     padding-top: 60px;
+}
+
+.content {
+    padding: 50px 200px 0px 200px;
 }
