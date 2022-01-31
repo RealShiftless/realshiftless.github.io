@@ -1,3 +1,16 @@
 * {
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    color: snow;
     font-family: 'Roboto', sans-serif;
+
+    background: rgba(50,50,50,255);
+}
+
+#header_span {
+    padding: 50px;
+    background: rgba(31,31,31,255);
 }
