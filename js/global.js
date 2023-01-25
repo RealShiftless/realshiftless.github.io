@@ -17,3 +17,5 @@ function clamp(v, minimum, maximum)
     else
         return v;
 }
+
+console.log(vw(100) + " " + vh(100));

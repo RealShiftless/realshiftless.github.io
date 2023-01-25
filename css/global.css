@@ -16,7 +16,7 @@ html {
 }
 
 .navigation {
-    height: 50px;
+    height: 5.23vh;
     background-color: #333;
 
     position: fixed;
@@ -32,10 +32,10 @@ html {
 
     display: block;
     text-align: center;
-    line-height: 50px;
+    line-height: 5.23vh;
 
     width: clamp(10vw, 108px, 1000px);
-    height: 50px;
+    height: 5.23vh;
 
     margin: 0;
 }
@@ -79,19 +79,63 @@ html {
     font-size: calc(clamp(8vw, 72px, 270px) / 4);
 }
 
+.slideshow_container {
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+
+    
+}
+
 .slideshow {
     background: linear-gradient(20deg, rgba(0,0,0,0.47941183309261204) 0%, rgba(0,0,0,0.2721289199273459) 100%);
 
     width: clamp(40vw, 720px, 2000px);
-    height: clamp(10vw, 480, 2000px);
+    height: 192px;
 
-    position: absolute;
-    top: 37vh;
-    left: 50%;
+    position: relative;
 
-    margin-left: calc(clamp(40vw, 580px, 2000px) / 1.5 * -1);
+    
+    margin-left: calc(clamp(40vw, 720px, 2000px) / 2 * -1 - 20px);
+    
 
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
 }
 
+.slideshow_nav {
+    background: linear-gradient(0deg, rgba(31,31,31,1) 0%, rgba(41,41,41,1) 100%);
+
+    margin-left: calc(clamp(40vw, 720px, 2000px) / 2 * -1 - 20px);
+
+    height: 3.66vh;
+
+    border-radius: 0px 0px 20px 20px;
+}
+
+.slideshow_nav a {
+    line-height: 3.66vh;
+
+    font-size: 3.36vh;
+
+    height: 3.66vh;
+}
+
+.slideshow_back_button {
+    margin-left: 20px;
+}
+
+.slideshow_back_button:hover {
+    margin-left: 19px;
+    transition: margin-left 150ms ease-in-out;
+}
+
+.slideshow_next_button {
+    margin-right: 20px;
+    float: right;
+}
+
+.slideshow_next_button:hover {
+    margin-right: 19px;
+    transition: margin-left 150ms ease-in-out;
+}
