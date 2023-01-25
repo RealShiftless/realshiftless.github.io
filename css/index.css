@@ -1,0 +1,90 @@
+#header_container {
+    position: relative;
+}
+
+#main_header_box {
+    width: 60vw;
+    height: 15vw;
+
+    position: absolute;
+    top: 37vh;
+    left: 50%;
+
+    margin-left: -30vw;
+
+    text-align: center;
+}
+
+#my_music {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+
+    margin-left: -30vh;
+}
+
+.cover_art {
+    width: 192px;
+    float: left;
+}
+
+.track_info {
+    position: relative;
+
+    height: 100%;
+
+    float: left;
+    margin-left: 20px; 
+}
+
+.track_info h1 {
+    color: #F7F7FF;
+
+    font-weight: bold;
+}
+
+.track_info h2 {
+    color: #F7F7FF;
+
+    font-style: italic;
+    font-weight: 300;
+}
+
+.track_info div {
+    padding-top: 15px;
+} 
+
+.track_links {
+    margin-top: 15px;
+}
+
+
+
+.track_links a {
+    width: clamp(7vw, 80px, 500px);
+
+    float: left;
+
+
+    margin-right: 10px;
+    padding: 10px;
+
+    text-align: center;
+    text-decoration: none;
+    font-style: italic;
+
+    background-color: #333;
+    border-radius: 10px;
+}
+
+#spotify {
+    background-color: #1DB954;
+}
+
+#apple {
+    background-color: #f94c57;
+}
+
+#youtube {
+    background-color: #d95652;
+}

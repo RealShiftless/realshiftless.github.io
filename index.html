@@ -1,57 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300;1,500&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/index.css">
 
-    </header>
+    <script src="./js/lib/p5.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/slideshow.js"></script>
+</head>
+<body>
 
-    <div class="title">
-        <h1>RealShiftless</h1>
-        <p>Pogramming blog</p>
+    <div class="container" id="header" style="background: #E9724C;">
+        <div id="main_header_box">
+            <a class="header">shiftless</a><br>
+            <a class="subtitle">Music and programming.</a>
+        </div>
+    </div>
+    
+    
+
+    <div class="container" id="about_me" style="background: #3A86FF;">
+        
     </div>
 
-    <div id="header">
-        <a class="active" href="#home">Home</a>
-        <a href="#home">Blog</a>
+    <div class="container" id="music" style="background: #FFBE0B;">
+        <div class="slideshow">
+            <div class="slide">
+                <image class="cover_art" src="./img/covers/lean_machine.png"></image>
+
+                <div class="track_info">
+                    <h1>LEAN MACHINE</h1>
+                    <h2>Single</h2>
+                    <div>
+                        <a>Minimal House</a><br>
+                        <a>29-12-2022</a>
+                    </div>
+
+                    <div class="track_links">
+                        <a id="spotify" href="https://open.spotify.com/track/7q8ABLN1Va935HMbh2KnaO?si=e561218397e64ac0">Spotify</a>
+                        <a id="apple" href="https://open.spotify.com/track/7q8ABLN1Va935HMbh2KnaO?si=e561218397e64ac0">Apple</a>
+                        <a id="youtube" href="https://open.spotify.com/track/7q8ABLN1Va935HMbh2KnaO?si=e561218397e64ac0">Youtube</a>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="slide" style="display:none;">
+                <image class="cover_art" src="./img/covers/sedatives.png"></image>
+
+                <div class="track_info">
+                    <h1>Sedatives</h1>
+                    <h2>Single</h2>
+
+                    <div class="extra_info">
+                        <a>Minimal House</a><br>
+                        <a>29-12-2022</a>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
     </div>
 
-    <body>
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue augue, blandit ac est vitae, congue aliquet leo. Nullam egestas vehicula libero eget imperdiet. Cras semper elementum pretium. Pellentesque consectetur, turpis et pharetra euismod, ligula nisi tempus leo, sit amet blandit justo nulla sit amet diam. Aliquam aliquam auctor leo, eu facilisis est tempor vel. Nulla ac pharetra mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Mauris pretium, est vestibulum scelerisque tristique, dui odio vulputate diam, vitae malesuada ligula nibh vitae justo.</p>
-        </div>
+    <div class="container" id="programming" style="background: #8A1C7C;">
 
-        <div class="content">
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ante sem, pulvinar nec mi in, scelerisque lobortis lacus. Etiam rhoncus diam in elit finibus, eget euismod nibh tristique. Phasellus pretium ut ante suscipit accumsan. Donec eleifend accumsan rhoncus. Integer at magna pharetra, aliquet est dignissim, gravida ligula. Pellentesque tincidunt ut nulla eget viverra. Sed bibendum lobortis pretium. Proin nec metus sem. Mauris neque magna, facilisis rutrum blandit sed, scelerisque ac metus. Proin sed libero egestas, sagittis lacus sed, interdum augue. Nam consectetur lorem sed diam rhoncus dictum.</p>
-        </div>
+    </div>
 
-        <div class="content">
-            <p>Sed eget ornare felis. Cras eu est accumsan, aliquet felis in, aliquam enim. Praesent at ornare ligula. Cras vulputate, massa ac lobortis vehicula, justo augue lacinia dui, non imperdiet mi turpis nec massa. Curabitur consectetur elit eget elit mattis, quis aliquet orci tempus. Etiam posuere dolor vel aliquet rutrum. Cras blandit, tortor id auctor hendrerit, risus erat tempus lorem, sed posuere enim nisl id felis. Sed vel ex mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu ex eu metus dapibus dignissim. Nunc blandit massa augue, eget consectetur mauris ultricies nec.</p>
-        </div>
+    <div class="container" id="contact" style="background: #5CF64A;">
 
-        <div class="content">
-            <p>Mauris in venenatis massa, pretium elementum lacus. Maecenas sapien arcu, vehicula a nisi in, porta laoreet erat. Mauris fermentum rhoncus interdum. Donec ac tortor malesuada, iaculis turpis nec, viverra est. Curabitur elementum, eros eu accumsan fringilla, quam magna consequat ipsum, at ultricies libero enim ac tortor. Donec tristique sem eu augue mollis, sed sollicitudin elit varius. Etiam faucibus vulputate posuere. Nullam in efficitur lacus. Etiam nec magna tortor. Integer maximus laoreet risus, non scelerisque odio sodales sit amet. Nullam id finibus massa. Nullam at scelerisque magna. Suspendisse potenti. Donec sed orci eget dui bibendum sollicitudin at ac felis.</p>
-        </div>
+    </div>
 
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue augue, blandit ac est vitae, congue aliquet leo. Nullam egestas vehicula libero eget imperdiet. Cras semper elementum pretium. Pellentesque consectetur, turpis et pharetra euismod, ligula nisi tempus leo, sit amet blandit justo nulla sit amet diam. Aliquam aliquam auctor leo, eu facilisis est tempor vel. Nulla ac pharetra mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Mauris pretium, est vestibulum scelerisque tristique, dui odio vulputate diam, vitae malesuada ligula nibh vitae justo.</p>
-        </div>
+    <div class="navigation" id="nav">
+        <a href="#header" id="selected">Home</a>
+        <a href="#about_me">About Me</a>
+        <a href="#music">Music</a>
+        <a href="#programming">Programming</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <script src="./js/navigation.js"></script>
 
-        <div class="content">
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ante sem, pulvinar nec mi in, scelerisque lobortis lacus. Etiam rhoncus diam in elit finibus, eget euismod nibh tristique. Phasellus pretium ut ante suscipit accumsan. Donec eleifend accumsan rhoncus. Integer at magna pharetra, aliquet est dignissim, gravida ligula. Pellentesque tincidunt ut nulla eget viverra. Sed bibendum lobortis pretium. Proin nec metus sem. Mauris neque magna, facilisis rutrum blandit sed, scelerisque ac metus. Proin sed libero egestas, sagittis lacus sed, interdum augue. Nam consectetur lorem sed diam rhoncus dictum.</p>
-        </div>
-
-        <div class="content">
-            <p>Sed eget ornare felis. Cras eu est accumsan, aliquet felis in, aliquam enim. Praesent at ornare ligula. Cras vulputate, massa ac lobortis vehicula, justo augue lacinia dui, non imperdiet mi turpis nec massa. Curabitur consectetur elit eget elit mattis, quis aliquet orci tempus. Etiam posuere dolor vel aliquet rutrum. Cras blandit, tortor id auctor hendrerit, risus erat tempus lorem, sed posuere enim nisl id felis. Sed vel ex mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu ex eu metus dapibus dignissim. Nunc blandit massa augue, eget consectetur mauris ultricies nec.</p>
-        </div>
-
-        <div class="content">
-            <p>Mauris in venenatis massa, pretium elementum lacus. Maecenas sapien arcu, vehicula a nisi in, porta laoreet erat. Mauris fermentum rhoncus interdum. Donec ac tortor malesuada, iaculis turpis nec, viverra est. Curabitur elementum, eros eu accumsan fringilla, quam magna consequat ipsum, at ultricies libero enim ac tortor. Donec tristique sem eu augue mollis, sed sollicitudin elit varius. Etiam faucibus vulputate posuere. Nullam in efficitur lacus. Etiam nec magna tortor. Integer maximus laoreet risus, non scelerisque odio sodales sit amet. Nullam id finibus massa. Nullam at scelerisque magna. Suspendisse potenti. Donec sed orci eget dui bibendum sollicitudin at ac felis.</p>
-        </div>
-    </body>
-
-    <script src="js/header.js"></script>
-</html>
+</body>
+</html> 
