@@ -88,3 +88,44 @@
 #youtube {
     background-color: #d95652;
 }
+
+
+.about_me_block {
+    color:#F7F7FF;
+    background-color: #00000015;
+
+    padding: 20px;
+
+    left: 50%;
+
+    margin: 20px 100px;
+
+    border-radius: 10px;
+}
+
+.about_me_block[name="what_do"], .about_me_block[name="what_can"] {
+    margin-top: 40px;
+}
+
+
+
+.about_me_block h1 {
+    margin-bottom: 10px;
+
+    font-style: italic;
+}
+
+.about_me_block h2 {
+    margin-bottom: 10px;
+}
+
+.about_me_block p {
+    text-align: justify;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.about_me_block[name="what_can"] p {
+    margin-bottom: 0px;
+
+}

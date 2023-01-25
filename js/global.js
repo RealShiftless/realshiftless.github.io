@@ -18,4 +18,4 @@ function clamp(v, minimum, maximum)
         return v;
 }
 
-console.log(vw(100) + " " + vh(100));
+
