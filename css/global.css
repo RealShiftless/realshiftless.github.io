@@ -1,7 +1,4 @@
-img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
-    display: none;
-}
-
+/* GLOBAL */
 :root {
     --ghost_white: #F7F7FF;
 }
@@ -15,6 +12,8 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/* NAVIGATION */
 .navigation {
     height: 5.23vh;
     background-color: #333;
@@ -59,6 +58,8 @@ html {
     transition: background-color 50ms ease-in-out;
 }
 
+
+/* CONTAINER */
 .container {
     min-height: 100vh;
     position: relative;
@@ -77,16 +78,106 @@ html {
     font-style: italic;
 }
 
+.container .contact_header {
+    font-size: calc(clamp(8vw, 72px, 270px) / 1.25);
+
+    font-weight: 500;
+    font-style: italic;
+}
+
 .container .subtitle {
     font-size: calc(clamp(8vw, 72px, 270px) / 4);
 }
 
-.slideshow_container {
-    position: absolute;
-    top: 60vh;
+
+/* TEXT BLOCK */
+.content_block {
+    color:#F7F7FF;
+    background-color: #00000015;
+
+    padding: 20px 20px 0px 20px;
+
     left: 50%;
 
-    
+    margin: 20px 100px;
+
+    border-radius: 10px;
+}
+
+.content_block h1 {
+    margin-bottom: 10px;
+
+    font-style: italic;
+}
+
+.content_block h2 {
+    margin-bottom: 10px;
+}
+
+.content_block h3 {
+    font-size: 16px;
+}
+
+.content_block p {
+    text-align: justify;
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+.skill_collection {
+    display: inline-block;
+
+    margin-right: 40px;
+}
+
+.skill_container {
+    display: inline-block;
+
+    width: 100px;
+
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.skill_bar {
+    display: inline-block;
+    height: 10px;
+
+    border-radius: 10px;
+}
+
+.mix_block {
+    display: inline-block;
+    margin-right: 20px;
+
+    margin-bottom: 20px;
+}
+
+.mix_block a {
+    display: block;
+}
+
+.gear_block {
+    display: inline-block;
+
+    width: 320px;
+
+    vertical-align: top;
+
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.gear_block ul {
+    list-style-type:circle;
+
+}
+
+/* SLIDE SHOW */
+.slideshow_container {
+    position: absolute;
+    top: calc(100vh - 400px - 20px);
+    left: 50%;
 }
 
 .slideshow {
@@ -143,26 +234,4 @@ html {
 
 #slideshow_nav_dot_active {
     background-color: #F7F7FF;
-}
-
-.skill_collection {
-    display: inline-block;
-
-    margin-right: 40px;
-}
-
-.skill_container {
-    display: inline-block;
-
-    width: 100px;
-
-    margin-right: 20px;
-    margin-bottom: 30px;
-}
-
-.skill_bar {
-    display: inline-block;
-    height: 10px;
-
-    border-radius: 10px;
 }
