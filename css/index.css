@@ -59,9 +59,6 @@
     padding-top: 15px;
 } 
 
-.track_links {
-}
-
 .track_links a {
     width: clamp(7vw, 80px, 500px);
 

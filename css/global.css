@@ -253,3 +253,13 @@ html {
 #slideshow_nav_dot_active {
     background-color: #F7F7FF;
 }
+
+
+/* BRANDING */
+.branding {
+    position: fixed;
+    bottom: 3px;
+    right: 5px;
+
+    color: #555;
+}
