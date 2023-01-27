@@ -74,14 +74,14 @@ html {
 }
 
 .container .header {
-    font-size: clamp(8vw, 72px, 270px);
+    font-size: clamp(8vw, 135px, 270px);
 
     font-weight: 500;
     font-style: italic;
 }
 
 .container .contact_header {
-    font-size: calc(clamp(8vw, 72px, 270px) / 1.25);
+    font-size: calc(clamp(8vw, 135px, 270px) / 1.25);
 
     font-weight: 500;
     font-style: italic;
