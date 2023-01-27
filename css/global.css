@@ -96,6 +96,7 @@ html {
 .content_block {
     color:#F7F7FF;
     background-color: #00000015;
+    background: linear-gradient(2deg, #00000025 0%, #00000010 100%);
 
     padding: 20px 20px 0px 20px;
 
@@ -127,22 +128,43 @@ html {
 }
 
 .skill_collection {
+    vertical-align: top;
+
     display: inline-block;
 
     margin-right: 40px;
 }
 
 .skill_container {
+    vertical-align: bottom;
+
     display: inline-block;
 
     width: 100px;
 
     margin-right: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
+
+.skill_container p {
+    height: 20px;
+}
+
+
 
 .skill_bar {
     display: inline-block;
+    height: 10px;
+
+    width: 100px;
+
+    border-radius: 10px;
+
+    background-color: #0002;
+}
+
+.skill_bar_body {
+    display: block;
     height: 10px;
 
     border-radius: 10px;
