@@ -32,7 +32,7 @@ function setup() {
     var clientHeight = document.getElementById('header').clientHeight;
 	var clientWidth = document.getElementById('header').clientWidth;
 
-	var cnv = createCanvas(vw(100), vh(100));
+	var cnv = createCanvas(clientWidth, clientHeight);
 	cnv.parent("header");
 
     smooth(5);
@@ -79,6 +79,13 @@ function draw() {
     if(Math.floor(v) == 0) {
         PARTICLES.push(new BackgroundParticle(random(vw(100)), random(32, 128)));
     }
+}
+
+function windowResized() {
+    var clientHeight = document.getElementById('header').clientHeight;
+	var clientWidth = document.getElementById('header').clientWidth;
+
+	var cnv = resizeCanvas(clientWidth, clientHeight);
 }
 
 function initParticle(x, y, s)
