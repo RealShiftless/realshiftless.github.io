@@ -1,10 +1,13 @@
 #header_container {
     position: relative;
+
 }
 
 #main_header_box {
     width: 60vw;
     height: 15vw;
+
+    z-index: 10;
 
     position: absolute;
     top: 37vh;
@@ -21,6 +24,10 @@
     left: 50%;
 
     margin-left: -30vh;
+}
+
+#header {
+    padding: 0;
 }
 
 .cover_art {
@@ -53,9 +60,6 @@
 .track_info div {
     padding-top: 15px;
 } 
-
-.track_links {
-}
 
 .track_links a {
     width: clamp(7vw, 80px, 500px);
