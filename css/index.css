@@ -55,16 +55,13 @@
 } 
 
 .track_links {
-    margin-top: 15px;
 }
-
-
 
 .track_links a {
     width: clamp(7vw, 80px, 500px);
 
     float: left;
-
+    margin-top: 15px;
 
     margin-right: 10px;
     padding: 10px;
@@ -75,6 +72,17 @@
 
     background-color: #333;
     border-radius: 10px;
+
+    transition: margin 150ms ease-in-out;
+}
+
+.track_links a:hover {
+    margin-top: 13px;
+
+    transition: margin 150ms ease-in-out;
+    transition: box-shadow 50ms ease-in-out;
+
+    box-shadow: 0px 3px .5px #333;
 }
 
 #spotify {
