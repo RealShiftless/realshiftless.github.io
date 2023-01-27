@@ -285,3 +285,13 @@ html {
 
     color: #555;
 }
+
+
+/* BACKGROUND */
+.background_container {
+    position: absolute;
+
+    top: 0;
+
+    z-index: -2 !important;
+}
