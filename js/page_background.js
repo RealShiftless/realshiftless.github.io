@@ -1,28 +1,37 @@
-const PARTICLE_SPEED = 1;
-const NOISE_SCALE = 400;
+const PARTICLE_SPEED = 2;
+const NOISE_SCALE = 600;
 const NOISE_RANGE = 150;
-const SIZE_DECREASE_SPEED = .2;
 const SPAWN_CHANCE = 20;
-const LIFE_TIME_MIN = 1600;
-const LIFE_TIME_MAX = 5200;
+const LIFE_TIME_MIN = .3;
+const LIFE_TIME_MAX = 1;
 const PRE_GEN_FRAMES = 6000;
+
+const MIN_PARTICLE_SIZE = 32;
+const MAX_PARTICLE_SIZE = 128;
 
 class Particle {
     constructor(xPosition, s) {
         this.startX = xPosition;
         this.t = 0;
-        this.maxT = random(LIFE_TIME_MIN, LIFE_TIME_MAX);
+
+        var rnd = -Math.pow((random(0, 1) - 1), 2)+1;
+
+        this.maxT = lifeDistMin + (lifeDistMax - lifeDistMin) * rnd;
         this.startT = globalT;
+
+        this.durationPercentage = 1 / (lifeDistMax - lifeDistMin) * (this.maxT - lifeDistMin);
 
         this.startSize = s;
     }
 
     update() {
         this.x = this.startX + (noise(this.startT + this.t / NOISE_SCALE) * 2 - 1) * NOISE_RANGE;
-        this.y = height + this.startSize - this.t * PARTICLE_SPEED;
-        this.size = this.startSize * (1 / this.maxT * (this.maxT - this.t));
+        this.y = height + this.startSize - this.t;
+        //this.size = this.startSize * (1 / this.maxT * (this.maxT - this.t));
 
-        this.t++;
+        this.size = MAX_PARTICLE_SIZE * this.durationPercentage * (1 / this.maxT * (this.maxT - this.t))
+
+        this.t += PARTICLE_SPEED;
 
         if(this.t >= this.maxT)
             return true;
@@ -49,12 +58,17 @@ let globalT = 0;
 let bg;
 let rt;
 
+let lifeDistMin, lifeDistMax;
+
 function setup() {
 	var clientWidth = windowWidth;
     var clientHeight = globalHeight;
 
 	var cnv = createCanvas(clientWidth, clientHeight);
 	cnv.parent(BACKGROUND_ELEMENT);
+
+    lifeDistMin = clientHeight * LIFE_TIME_MIN;
+    lifeDistMax = clientHeight * LIFE_TIME_MAX;
 
     smooth(5);
     noStroke();
@@ -75,7 +89,7 @@ function setup() {
     for(var frame = 0; frame < PRE_GEN_FRAMES; frame++)
     {
         if(Math.floor(random(SPAWN_CHANCE)) == 0) {
-            particles.push(new Particle(random(vw(100)), random(32, 128)));
+            particles.push(new Particle(random(vw(100)), random(MIN_PARTICLE_SIZE, MAX_PARTICLE_SIZE)));
         }
 
         for(var i = 0; i < particles.length; i++) {
@@ -90,7 +104,8 @@ function setup() {
 
 function draw() {
     tint(255);
-    image(bg,0,0);
+    clear();
+    //image(bg,0,0);
     rt.clear();
 
     for(let i = 0; i < particles.length; i++) {
@@ -101,8 +116,8 @@ function draw() {
         }
     }
 
-    if(Math.floor(random(SPAWN_CHANCE)) == 0) {
-        particles.push(new Particle(random(vw(100)), random(32, 128)));
+    if(Math.floor(random(SPAWN_CHANCE / PARTICLE_SPEED)) == 0) {
+        particles.push(new Particle(random(vw(100)), random(MIN_PARTICLE_SIZE, MAX_PARTICLE_SIZE)));
     }
 
     globalT++;

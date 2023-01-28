@@ -82,16 +82,9 @@ function InitializeNavigation() {
     currentChapter.navElement.setAttribute("id", "selected");
 }
 
-// Vars
-let globalHeight;
-
-// Initialize
-InitializeNavigation();
-
-// Scroll event
-addEventListener("scroll", (event) => {
+function checkScroll() {
     // Get the scroll with an offset
-    var scroll = window.pageYOffset + vh(75);
+    var scroll = window.pageYOffset + vh(65);
 
     // Back check
     if(scroll < currentChapter.heightOffset)
@@ -99,6 +92,10 @@ addEventListener("scroll", (event) => {
         currentChapter.navElement.setAttribute("id", "");
         currentChapter = CHAPTERS[clamp(currentChapter.chapterId - 1, 0, CHAPTERS.length)];
         currentChapter.navElement.setAttribute("id", "selected");
+
+        document.body.setAttribute('id', currentChapter.elementId + '_background');
+
+        return true;
     }
 
     // Next check
@@ -107,7 +104,24 @@ addEventListener("scroll", (event) => {
         currentChapter.navElement.setAttribute("id", "");
         currentChapter = CHAPTERS[clamp(currentChapter.chapterId + 1, 0, CHAPTERS.length)];
         currentChapter.navElement.setAttribute("id", "selected");
+
+        document.body.setAttribute('id', currentChapter.elementId + '_background');
+
+        return true;
     }
+
+    return false;
+}
+
+// Vars
+let globalHeight;
+
+// Initialize
+InitializeNavigation();
+
+// Scroll event
+addEventListener("scroll", (event) => {
+    while(checkScroll()) {}
 });
 
 // Resize event

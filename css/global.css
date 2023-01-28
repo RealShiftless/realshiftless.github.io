@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background-color: #E9724C;
+    background-color: #F76C50;
 }
 
 /* NAVIGATION */
@@ -297,4 +297,34 @@ body {
     top: 0;
 
     z-index: -2 !important;
+}
+
+#header_background {
+    background-color: #F76C50;
+
+    transition: background-color 500ms ease-in-out;
+}
+
+#about_me_background {
+    background-color: #6367E3;
+
+    transition: background-color 500ms ease-in-out;
+}
+
+#music_background {
+    background-color: #F985FF;
+
+    transition: background-color 500ms ease-in-out;
+}
+
+#studio_background {
+    background-color: #FFCF70;
+
+    transition: background-color 500ms ease-in-out;
+}
+
+#contact_background {
+    background-color: #A3FF99;
+
+    transition: background-color 500ms ease-in-out;
 }
