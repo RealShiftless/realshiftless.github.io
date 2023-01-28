@@ -118,6 +118,15 @@ function windowResized() {
     rt.width = clientWidth;
     rt.height = clientHeight;
 
+    bg = createGraphics(clientWidth, clientHeight);
+    bg.noStroke();
+
+    CHAPTERS.forEach(chapter => {
+        bg.fill(chapter.color.r, chapter.color.g, chapter.color.b);
+        bg.rect(0, chapter.heightOffset, clientWidth, chapter.height);
+    });
+    image(bg,0,0);
+
 	var cnv = resizeCanvas(clientWidth, clientHeight);
 }
 

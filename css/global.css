@@ -14,6 +14,9 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    background-color: #E9724C;
+}
 
 /* NAVIGATION */
 .navigation {

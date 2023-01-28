@@ -30,10 +30,10 @@ class Color {
 
 // Chapters
 const CHAPTERS = [
-    new Chapter('header', 'Home', new Color(233, 114, 76)),
-    new Chapter('about_me', 'About Me', new Color(129, 134, 217)),
-    new Chapter('music', 'My Music', new Color(161, 123, 183)),
-    new Chapter('studio', 'Studio', new Color(230, 230, 121)),
+    new Chapter('header', 'Home', new Color(247, 108, 80)),
+    new Chapter('about_me', 'About Me', new Color(99, 103, 227)),
+    new Chapter('music', 'My Music', new Color(249, 133, 255)),
+    new Chapter('studio', 'Studio', new Color(255, 207, 112)),
     new Chapter('contact', 'Contact', new Color(163, 240, 153))
 ];
 
