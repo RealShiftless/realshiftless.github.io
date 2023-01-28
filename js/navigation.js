@@ -1,3 +1,5 @@
+const FOOTER_SCROLL_TRANSITION_OFFSET = vh(21);
+
 // Chapter object
 class Chapter {
     constructor(id, name, color)
@@ -99,7 +101,12 @@ function checkScroll() {
     }
 
     // Next check
-    if(scroll >= currentChapter.heightOffset + currentChapter.height)
+    var extraOffset = 0;
+
+    if(currentChapter.chapterId == CHAPTERS.length - 2)
+        extraOffset = FOOTER_SCROLL_TRANSITION_OFFSET;
+
+    if(scroll - extraOffset >= currentChapter.heightOffset + currentChapter.height)
     {
         currentChapter.navElement.setAttribute("id", "");
         currentChapter = CHAPTERS[clamp(currentChapter.chapterId + 1, 0, CHAPTERS.length)];
