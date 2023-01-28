@@ -20,25 +20,19 @@
     text-align: center;
 }
 
-#my_music {
-    position: absolute;
-    top: 62%;
-    left: 50%;
-
-    margin-left: -30vh;
-}
-
 .cover_art {
     width: 192px;
-    float: left;
+
+    display: inline-block;
 }
 
 .track_info {
-    position: relative;
+    display: inline-block;
 
     height: 100%;
 
-    float: left;
+    vertical-align: top;
+
     margin-left: 20px; 
 }
 
@@ -59,49 +53,46 @@
     padding-top: 15px;
 } 
 
+.track_links {
+    margin: 10px 0;
+}
+
 .track_links a {
-    width: clamp(7vw, 80px, 500px);
+    display: inline-block;
 
-    float: left;
-    margin-top: 15px;
-
-    margin-right: 10px;
+    width: 100px;
     padding: 10px;
 
     text-align: center;
     text-decoration: none;
-    font-style: italic;
-
+    color: #F7F7FFBB;
     background-color: #333;
-    border-radius: 10px;
-
-    transition: margin 150ms ease-in-out;
+    border-radius: 5px;
 }
 
-.track_links a:hover {
-    margin-top: 13px;
-
-    transition: margin 150ms ease-in-out;
-    transition: box-shadow 50ms ease-in-out;
-
-    box-shadow: 0px 3px .5px #333;
+.track_links a[name='spotify'] {
+    background-color: #1db954;
 }
 
-#spotify {
-    background-color: #1DB954;
-}
-
-#apple {
+.track_links a[name='apple_music'] {
     background-color: #f94c57;
 }
 
-#youtube {
+.track_links a[name='youtube_music'] {
     background-color: #d95652;
 }
 
-#soundcloud {
+.track_links a[name='soundcloud'] {
     background-color: #ff7700;
 }
+
+.track_links a:hover {
+    color: #F7F7FF;
+    transition: background-color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+}
+
+
 
 .content_block[name="what_do"], .content_block[name="what_can"], .content_block[name="what_have"] {
     margin-top: 40px;

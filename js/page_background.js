@@ -1,5 +1,5 @@
-const PARTICLE_SPEED = 2;
-const NOISE_SCALE = 600;
+const PARTICLE_SPEED = 1.5;
+const NOISE_SCALE = 500;
 const NOISE_RANGE = 150;
 const SPAWN_CHANCE = 20;
 const LIFE_TIME_MIN = .3;
